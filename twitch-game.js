@@ -76,12 +76,13 @@
         return window.add_element('warrior', name, pos).catch(() => {});
     }
 
-    function spawnEntity(typeKey) {
+    function spawnEntity(typeKey, displayName) {
         const sm = window.startMode;
         const pos = sm && typeof sm.getNearCastlePosition === 'function'
             ? sm.getNearCastlePosition(4)
             : { col: 10, row: 10 };
-        return window.add_element(typeKey, pos).catch((err) => {
+        const name = safeDisplayName(displayName);
+        return window.add_element(typeKey, name, pos).catch((err) => {
             console.warn('[twitch-game] spawn turret falhou:', typeKey, err);
         });
     }
@@ -112,7 +113,7 @@
                 'turret_fire'
             ]);
             if (allowed.has(cmd)) {
-                enqueue(() => spawnEntity(cmd));
+                enqueue(() => spawnEntity(cmd, data.displayName));
             }
         }
     }
