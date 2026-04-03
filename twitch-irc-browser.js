@@ -37,9 +37,24 @@
         return { tags, login: m[1], channel: m[2].toLowerCase(), body: m[3].trim() };
     }
 
+    function normalizeChatBody(body) {
+        return String(body || '')
+            .replace(/[\u200B-\u200D\uFEFF]/g, '')
+            .trim();
+    }
+
+    /** Primeiro token que corresponde a um comando (não só o 1.º da frase — ex.: @alguem !turret_heal). */
     function parseChatCommand(body) {
-        const first = body.split(/\s+/)[0].toLowerCase();
-        return COMMAND_ALIASES[first] || null;
+        const cleaned = normalizeChatBody(body);
+        if (!cleaned) return null;
+        const tokens = cleaned.split(/\s+/);
+        for (let i = 0; i < tokens.length; i++) {
+            const key = tokens[i].toLowerCase();
+            if (COMMAND_ALIASES[key]) {
+                return COMMAND_ALIASES[key];
+            }
+        }
+        return null;
     }
 
     let ws = null;

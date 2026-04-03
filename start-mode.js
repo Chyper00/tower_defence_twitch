@@ -58,11 +58,52 @@
 
     function getNearCastlePosition(range) {
         const r = Number(range) || 5;
-        const centerCol = Math.floor(window.grid.GRID_COLS / 2);
-        const centerRow = Math.floor(window.grid.GRID_ROWS / 2);
-        const col = centerCol + rand(r * 2) - r;
-        const row = centerRow + rand(r * 2) - r;
-        return clampCell(col, row);
+        const g = window.grid;
+        if (!g) {
+            return { col: 0, row: 0 };
+        }
+
+        let c0 = Math.floor(g.GRID_COLS / 2);
+        let r0 = Math.floor(g.GRID_ROWS / 2);
+        let cw = 1;
+        let ch = 1;
+        let excludeCastle = false;
+        try {
+            const castle = window.levelManager && typeof window.levelManager.getCastle === 'function'
+                ? window.levelManager.getCastle()
+                : null;
+            if (castle && Number.isFinite(castle.col) && Number.isFinite(castle.row)) {
+                c0 = castle.col;
+                r0 = castle.row;
+                cw = castle.tilesWide || 1;
+                ch = castle.tilesHigh || 1;
+                excludeCastle = true;
+            }
+        } catch (e) {
+            /* ignore */
+        }
+
+        const castleMinC = c0;
+        const castleMaxC = c0 + cw - 1;
+        const castleMinR = r0;
+        const castleMaxR = r0 + ch - 1;
+        const span = Math.max(1, r * 2 + 1);
+
+        for (let attempt = 0; attempt < 60; attempt++) {
+            const col = c0 + rand(span) - r;
+            const row = r0 + rand(span) - r;
+            const cl = clampCell(col, row);
+            if (excludeCastle) {
+                const onCastle = cl.col >= castleMinC && cl.col <= castleMaxC
+                    && cl.row >= castleMinR && cl.row <= castleMaxR;
+                if (onCastle) {
+                    continue;
+                }
+            }
+            return cl;
+        }
+
+        return clampCell(castleMaxC + 1, r0);
     }
 
     function spawnEnemy() {

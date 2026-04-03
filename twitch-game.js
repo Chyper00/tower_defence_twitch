@@ -81,7 +81,9 @@
         const pos = sm && typeof sm.getNearCastlePosition === 'function'
             ? sm.getNearCastlePosition(4)
             : { col: 10, row: 10 };
-        return window.add_element(typeKey, pos).catch(() => {});
+        return window.add_element(typeKey, pos).catch((err) => {
+            console.warn('[twitch-game] spawn turret falhou:', typeKey, err);
+        });
     }
 
     function handleMessage(data) {
@@ -93,7 +95,11 @@
         }
 
         if (data.type === 'command') {
-            const cmd = String(data.command || '').toLowerCase().replace(/-/g, '_');
+            const cmd = String(data.command || '')
+                .trim()
+                .toLowerCase()
+                .replace(/-/g, '_')
+                .replace(/^!+/, '');
             if (cmd === 'warrior') {
                 enqueue(() => spawnWarriorNamed(data.displayName));
                 return;
