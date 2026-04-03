@@ -1,0 +1,20 @@
+{
+  "type": "castle",
+  "key": "castle",
+  "image": "assets/castle/castle-01.png",
+  "size": {
+    "tilesWide": 3,
+    "tilesHigh": 3,
+    "heightMultiplier": 3.12,
+    "hitBoundsScale": 0.58
+  },
+  "position": {
+    "offsetY": 2
+  },
+  "stats": {
+    "initialHealth": 100000000000,
+    "maxHealth": 100000000000
+  },
+  "level": 1,
+  "zIndex": 10
+}

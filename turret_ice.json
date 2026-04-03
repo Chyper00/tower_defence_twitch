@@ -1,0 +1,41 @@
+{
+  "type": "turret_ice",
+  "category": "structure",
+  "key": "turret_ice",
+  "idleAnimation": false,
+  "image": "assets/turrets/turret_ice.png",
+  "size": {
+    "tilesWide": 1,
+    "tilesHigh": 1,
+    "heightMultiplier": 1.62
+  },
+  "stats": {
+    "maxHealth": 10000
+  },
+  "combat": {
+    "rangeTiles": 7,
+    "damagePerAttack": 14,
+    "attackIntervalSec": 0.6,
+    "slowMultiplier": 0.45,
+    "slowDurationSec": 2.2,
+    "maxShots": 36
+  },
+  "projectile": {
+    "interval": 0.15,
+    "speed": 560,
+    "color": 8965375,
+    "iceHitScale": 1
+  },
+  "position": {
+    "offsetY": 2
+  },
+  "animations": {
+    "idle": {
+      "floatPx": 2,
+      "durationMs": 860
+    },
+    "attackTint": 8965375,
+    "attackPulseMs": 110
+  },
+  "zIndex": 11
+}

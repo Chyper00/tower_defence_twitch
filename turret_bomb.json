@@ -1,0 +1,50 @@
+{
+  "type": "turret_bomb",
+  "category": "structure",
+  "key": "turret_bomb",
+  "idleAnimation": false,
+  "image": "assets/turrets/turret_bomb.png",
+  "size": {
+    "tilesWide": 1,
+    "tilesHigh": 1,
+    "heightMultiplier": 1.62
+  },
+  "stats": {
+    "maxHealth": 500
+  },
+  "combat": {
+    "rangeTiles": 12,
+    "damagePerAttack": 58,
+    "attackIntervalSec": 2.1,
+    "aoeRadiusTiles": 1,
+    "maxShots": 50
+  },
+  "projectile": {
+    "texture": "projectile_bomb",
+    "image": "assets/projectile/bomb.png",
+    "scale": 0.2,
+    "interval": 0.15,
+    "speed": 155,
+    "color": 16757312,
+    "arcHeight": 105,
+    "groundOffsetY": 6,
+    "directHitRadiusPx": 32,
+    "explosionScale": 1.15,
+    "knockback": {
+      "distance": 26,
+      "durationMs": 170
+    }
+  },
+  "position": {
+    "offsetY": 2
+  },
+  "animations": {
+    "idle": {
+      "floatPx": 2,
+      "durationMs": 980
+    },
+    "attackTint": 16751104,
+    "attackPulseMs": 160
+  },
+  "zIndex": 11
+}

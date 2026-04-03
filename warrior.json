@@ -1,0 +1,61 @@
+{
+  "type": "hero_warrior",
+  "category": "hero",
+  "key": "hero_warrior",
+  "variants": [
+    {
+      "id": "warrior-1",
+      "directionCount": 8,
+      "invertDirectionX": true,
+      "directionRowOrder": ["s", "sw", "w", "nw", "n", "ne", "e", "se"],
+      "animations": {
+        "walk": {
+          "image": "assets/heros/warrior/hero-walk.png",
+          "rows": 8,
+          "cols": 4,
+          "frameWidth": 32,
+          "frameHeight": 31,
+          "fps": 12
+        },
+        "attack": {
+          "image": "assets/heros/warrior/hero-atack.png",
+          "rows": 8,
+          "cols": 4,
+          "frameWidth": 31,
+          "frameHeight": 32,
+          "fps": 15
+        },
+        "death": {
+          "image": "assets/heros/warrior/hero-death.png",
+          "rows": 8,
+          "cols": 4,
+          "frameWidth": 31,
+          "frameHeight": 32,
+          "fps": 14
+        }
+      }
+    }
+  ],
+  "size": {
+    "tilesWide": 1,
+    "tilesHigh": 1,
+    "heightMultiplier": 1.2
+  },
+  "stats": {
+    "maxHealth": 120
+  },
+  "movement": {
+    "speedTilesPerSecond": 1.1
+  },
+  "combat": {
+    "rangeTiles": 1,
+    "damagePerAttack": 18,
+    "attackIntervalSec": 0.7,
+    "selfDamagePerAttack": 8,
+    "maxAttacks": 0
+  },
+  "position": {
+    "offsetY": 2
+  },
+  "zIndex": 12
+}

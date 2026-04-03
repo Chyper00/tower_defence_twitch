@@ -1,0 +1,39 @@
+{
+  "type": "turret_archer",
+  "category": "structure",
+  "key": "turret_archer",
+  "idleAnimation": false,
+  "image": "assets/castle.png",
+  "size": {
+    "tilesWide": 1,
+    "tilesHigh": 1,
+    "heightMultiplier": 1.62
+  },
+  "stats": {
+    "maxHealth": 500
+  },
+  "combat": {
+    "power": 0,
+    "dps": 24,
+    "rangeTiles": 7,
+    "attackIntervalSec": 0.35,
+    "maxShots": 50
+  },
+  "projectile": {
+    "interval": 0.2,
+    "speed": 520,
+    "color": 16766976
+  },
+  "position": {
+    "offsetY": 2
+  },
+  "animations": {
+    "idle": {
+      "floatPx": 2,
+      "durationMs": 900
+    },
+    "attackTint": 16773324,
+    "attackPulseMs": 120
+  },
+  "zIndex": 11
+}

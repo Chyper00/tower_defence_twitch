@@ -1,0 +1,12 @@
+{
+  "name": "my_pet",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "twitch-bridge": "node server/twitch-bridge.mjs"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ws": "^8.18.0"
+  }
+}

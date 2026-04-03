@@ -1,0 +1,56 @@
+{
+  "type": "enemy_slime",
+  "category": "enemy",
+  "key": "enemy_slime",
+  "variants": [
+    {
+      "id": "slime-1",
+      "animations": {
+        "walk": {
+          "image": "assets/enemys/slimes/slime-1/slime-walk.png",
+          "rows": 4,
+          "cols": 8,
+          "frameWidth": 64,
+          "frameHeight": 64,
+          "fps": 12
+        },
+        "attack": {
+          "image": "assets/enemys/slimes/slime-1/slime-atack.png",
+          "rows": 4,
+          "cols": 10,
+          "frameWidth": 64,
+          "frameHeight": 64,
+          "fps": 16
+        },
+        "death": {
+          "image": "assets/enemys/slimes/slime-1/slime-death.png",
+          "rows": 4,
+          "cols": 10,
+          "frameWidth": 64,
+          "frameHeight": 64,
+          "fps": 14
+        }
+      }
+    }
+  ],
+  "size": {
+    "tilesWide": 1,
+    "tilesHigh": 1,
+    "heightMultiplier": 1.2
+  },
+  "stats": {
+    "maxHealth": 80
+  },
+  "movement": {
+    "speedTilesPerSecond": 1
+  },
+  "combat": {
+    "power": 0,
+    "dps": 12,
+    "rangeTiles": 1
+  },
+  "position": {
+    "offsetY": 2
+  },
+  "zIndex": 12
+}

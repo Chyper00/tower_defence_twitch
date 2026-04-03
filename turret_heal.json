@@ -1,0 +1,40 @@
+{
+  "type": "turret_heal",
+  "category": "structure",
+  "key": "turret_heal",
+  "idleAnimation": false,
+  "image": "assets/turrets/turret_heal.png",
+  "size": {
+    "tilesWide": 1,
+    "tilesHigh": 1,
+    "heightMultiplier": 1.62
+  },
+  "stats": {
+    "maxHealth": 500
+  },
+  "combat": {
+    "rangeTiles": 0,
+    "healPerTick": 10,
+    "attackIntervalSec": 1.2,
+    "maxShots": 50,
+    "damageReductionPercent": 15,
+    "auraDamageReductionCap": 45
+  },
+  "projectile": {
+    "interval": 0.2,
+    "speed": 450,
+    "color": 9498256
+  },
+  "position": {
+    "offsetY": 2
+  },
+  "animations": {
+    "idle": {
+      "floatPx": 3,
+      "durationMs": 1100
+    },
+    "attackTint": 9498256,
+    "attackPulseMs": 180
+  },
+  "zIndex": 11
+}

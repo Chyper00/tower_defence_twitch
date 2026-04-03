@@ -1,0 +1,59 @@
+{
+  "type": "enemy_orc",
+  "category": "enemy",
+  "key": "enemy_orc",
+  "variants": [
+    {
+      "id": "orc-1",
+      "directionCount": 8,
+      "invertDirectionX": true,
+      "directionRowOrder": ["s", "sw", "w", "nw", "n", "ne", "e", "se"],
+      "animations": {
+        "walk": {
+          "image": "assets/enemys/orcs/orc-1/orc-walk.png",
+          "rows": 8,
+          "cols": 4,
+          "frameWidth": 32,
+          "frameHeight": 32,
+          "fps": 12
+        },
+        "attack": {
+          "image": "assets/enemys/orcs/orc-1/orc-atack.png",
+          "rows": 8,
+          "cols": 4,
+          "frameWidth": 31,
+          "frameHeight": 31,
+          "fps": 14
+        },
+        "death": {
+          "image": "assets/enemys/orcs/orc-1/orc-death.png",
+          "rows": 8,
+          "cols": 4,
+          "frameWidth": 32,
+          "frameHeight": 31,
+          "fps": 14
+        }
+      }
+    }
+  ],
+  "size": {
+    "tilesWide": 1,
+    "tilesHigh": 1,
+    "heightMultiplier": 1.25
+  },
+  "stats": {
+    "maxHealth": 135
+  },
+  "movement": {
+    "speedTilesPerSecond": 0.95
+  },
+  "combat": {
+    "power": 0,
+    "dps": 20,
+    "rangeTiles": 1
+  },
+  "position": {
+    "offsetY": 2
+  },
+  "zIndex": 12
+}

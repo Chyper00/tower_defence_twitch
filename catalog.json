@@ -1,0 +1,13 @@
+{
+  "castle": "castle.json",
+  "warrior": "warrior.json",
+  "orc": "enemy_orc.json",
+  "slime": "enemy_slime.json",
+  "slime_blue": "enemy_slime-blue.json",
+  "slime_fire": "enemy_slime-fire.json",
+  "turret_archer": "turret_archer.json",
+  "turret_bomb": "turret_bomb.json",
+  "turret_fire": "turret_fire.json",
+  "turret_heal": "turret_heal.json",
+  "turret_ice": "turret_ice.json"
+}

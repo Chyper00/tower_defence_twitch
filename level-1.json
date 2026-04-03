@@ -1,0 +1,8 @@
+{
+  "elements": [
+    {
+      "ref": "castle",
+      "coords": { "col": 24, "row": 24 }
+    }
+  ]
+}

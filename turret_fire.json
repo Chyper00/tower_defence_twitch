@@ -1,0 +1,40 @@
+{
+  "type": "turret_fire",
+  "category": "structure",
+  "key": "turret_fire",
+  "idleAnimation": false,
+  "image": "assets/turrets/turret_fire.png",
+  "size": {
+    "tilesWide": 1,
+    "tilesHigh": 1,
+    "heightMultiplier": 1.62
+  },
+  "stats": {
+    "maxHealth": 500
+  },
+  "combat": {
+    "rangeTiles": 7,
+    "damagePerAttack": 10,
+    "attackIntervalSec": 0.5,
+    "burnDps": 18,
+    "burnDurationSec": 2.6,
+    "maxShots": 50
+  },
+  "projectile": {
+    "interval": 0.15,
+    "speed": 580,
+    "color": 16743936
+  },
+  "position": {
+    "offsetY": 2
+  },
+  "animations": {
+    "idle": {
+      "floatPx": 2,
+      "durationMs": 840
+    },
+    "attackTint": 16743936,
+    "attackPulseMs": 120
+  },
+  "zIndex": 11
+}
